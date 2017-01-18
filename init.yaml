@@ -1,77 +1,103 @@
 init:
   nationalreview:
     title: National Review
+    link: http://www.nationalreview.com/
     tags: [conservative]
     feeds:
       homepage:
         name: Homepage
         link: http://www.nationalreview.com/
-        type: no-rss 
+        type: simple 
   newyorker:
+    title: The New Yorker
+    link: http://www.newyorker.com/
     feeds:
       main:
         link: http://www.newyorker.com/feed/everything
   theatlantic:
+    title: The Atlantic
+    link: https://www.theatlantic.com/
     feeds:
       main:
         link: https://www.theatlantic.com/feed/all/
   huffingtonpost:
+    title: The Huffington Post
+    link: http://www.huffingtonpost.com/
     feeds:
       main:
         link: http://www.huffingtonpost.com/feeds/index.xml
   daringfireball:
+    title: Daring Fireball
+    link: https://daringfireball.net/
     tags: [technology]
     feeds:
       main: 
         link: http://daringfireball.net/feeds/main
   newyorktimes:
+    title: The New York Times
+    link: https://www.nytimes.com/
     feeds:
       homepage:
         link: http://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml
   washingonpost:
-    urls:
+    title: The Washington Post
+    link: https://www.washingtonpost.com/
     feeds:
       national:
         link: http://feeds.washingtonpost.com/rss/national
   drudgereport:
     title: The Drudge Report
+    link: http://www.drudgereport.com/
     tags: [conservative]
     feeds:
       homepage:
         name: Homepage
         link: http://www.drudgereport.com/
-        type: no-rss 
+        type: simple 
   weeklystandard:
+    title: The Weekly Standard
+    link: http://www.weeklystandard.com/
     tags: [conservative]
     feeds:
       main:
         link: http://www.weeklystandard.com/rss/all
   boingboing:
+    title: BoingBoing
+    link: http://www.boingboing.net/blog
     feeds:
       main:
         link: http://boingboing.net/feed
   hackaday:
+    title: Hackaday
+    link: http://hackaday.com/
     tags: [technology]
     feeds:
       main:
         link: http://hackaday.com/feed/
   icringely:
+    title: I, Cringely
+    link: http://www.cringely.com/
     tags: [technology]
     feeds:
       main:
         link: http://www.cringely.com/feed/
   eevblog:
+    title: EEVblog [channel]
+    link: https://www.youtube.com/channel/UC2DjFE7Xf11URZqWBigcVOQ
     tags: [technology, youtube]
     feeds:
       main:
         link: https://www.youtube.com/feeds/videos.xml?channel_id=UC2DjFE7Xf11URZqWBigcVOQ
   ave:
+    title: AvE [channel]
+    link: https://www.youtube.com/channel/UChWv6Pn_zP0rI6lgGt3MyfA
     tags: [youtube]
     feeds:
       main:
         link: https://www.youtube.com/feeds/videos.xml?channel_id=UChWv6Pn_zP0rI6lgGt3MyfA
   colinfurze:
-    name: Colin Furze
+    title: Colin Furze [channel]
+    link: https://www.youtube.com/channel/UCp68_FLety0O-n9QU6phsgw
     tags: [youtube]
     feeds:
       main:

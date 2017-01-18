@@ -1,6 +1,7 @@
 from sqlalchemy.orm import sessionmaker
 import sqlalchemy
 from sqlalchemy.ext.declarative import declarative_base
+import json
 
 Base = declarative_base()
 
@@ -51,7 +52,13 @@ class LinkChecker:
             temp_title = code
             if 'title' in site:
                 temp_title = site['title']
-            temp_site = Site(code=code, title=temp_title)
+            temp_link = ''
+            if 'link' in site:
+                temp_link = site['link']
+            temp_tags = ''
+            if 'tags' in site:
+                temp_tags = json.dumps(site['tags'])
+            temp_site = Site(code=code, title=temp_title, link=temp_link, tags=temp_tags)
             self.session.add(temp_site)
             self.session.commit()
 
@@ -59,7 +66,7 @@ class LinkChecker:
                 temp_name = feedcode
                 if 'title' in feed:
                     temp_name = feed['title']
-                temp_type = None
+                temp_type = 'rss'
                 if 'type' in feed:
                     temp_type = feed['type']
                 temp_feed = Feed(site_id=temp_site.id, code=feedcode, title=temp_name, link=feed['link'], type=temp_type)

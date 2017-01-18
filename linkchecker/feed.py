@@ -34,8 +34,8 @@ class Feed(Base):
         if self.link is None:
             return False
 
-        if self.type == 'no-rss':
-            print "Checking using method no-rss"
+        if self.type == 'simple':
+            print "Checking using method simple"
             feed = requests.get(self.link)
             self.pinged = func.now()
             self.last_status = feed.status_code

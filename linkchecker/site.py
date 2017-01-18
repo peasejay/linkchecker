@@ -8,6 +8,7 @@ class Site(Base):
     id = Column(Integer, primary_key=True)
     code = Column(String(50), nullable=False)
     title = Column(String(255))
+    link = Column(String(255))
     tags = Column(String(255))
     feeds = relationship("Feed", back_populates="site")
 
