@@ -13,9 +13,5 @@ class Site(Base):
     updated = Column(DateTime(timezone=True))
     feeds = relationship("Feed", back_populates="site")
 
-    @classmethod
-    def get_by_code(self, code):
-        return session.query(self).filter(self.code == code).first()
-
     def __repr__(self):
         return "<Site(id='%d', code='%s', title='%s')>" % (int(self.id), self.code, self.title)

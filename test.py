@@ -27,6 +27,11 @@ lc = LinkChecker(engine, init)
 
 lc.check_all()
 
+print
+print
+print
+print lc.test_output_simple()
+
 # bluh = Site()
 # bluh.code = "fdsafas"
 # bluh.get_by_code("fdsafas");

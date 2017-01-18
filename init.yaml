@@ -62,7 +62,7 @@ init:
       main:
         link: http://www.weeklystandard.com/rss/all
   boingboing:
-    title: BoingBoing
+    title: Boing Boing
     link: http://www.boingboing.net/blog
     feeds:
       main:
@@ -102,3 +102,9 @@ init:
     feeds:
       main:
         link: https://www.youtube.com/feeds/videos.xml?channel_id=UCp68_FLety0O-n9QU6phsgw
+  jesush:
+    title: JesusH
+    link: http://www.jesush.com/
+    feeds:
+      main:
+        link: http://jesush.conglomero.com/index.php/feed/

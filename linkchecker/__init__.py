@@ -2,6 +2,7 @@ from sqlalchemy.orm import sessionmaker
 import sqlalchemy
 from sqlalchemy.ext.declarative import declarative_base
 import json
+from jinja2 import Template
 
 Base = declarative_base()
 
@@ -86,6 +87,12 @@ class LinkChecker:
                 print "%s: %s => %s" % (site.title, feed.code, feed.link)
                 feed.check()
                 self.session.commit()
+
+    def test_output_simple(self):
+        sites = self.session.query(Site).order_by(Site.updated.desc())
+        template = Template('{% for site in sites %}{{ site.title }}\t{{ site.link }}\t{{ site.updated }}\n{% for feed in site.feeds %}{% for entry in feed.entries %}    {{ entry.title }}\t{{ entry.author }}\t{{ entry.link }}\t{{ entry.pinged }}\n{% endfor %}\n{% endfor %}\n{% endfor %}')
+        output = template.render(sites=sites)
+        return output
 
 
 
