@@ -1,5 +1,5 @@
 from linkchecker import Base
-from sqlalchemy import Column, String, Integer
+from sqlalchemy import Column, String, Integer, DateTime
 from sqlalchemy.orm import relationship
 
 class Site(Base):
@@ -10,6 +10,7 @@ class Site(Base):
     title = Column(String(255))
     link = Column(String(255))
     tags = Column(String(255))
+    updated = Column(DateTime(timezone=True))
     feeds = relationship("Feed", back_populates="site")
 
     @classmethod

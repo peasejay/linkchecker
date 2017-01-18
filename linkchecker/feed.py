@@ -77,6 +77,7 @@ class Feed(Base):
                     site_updated = True
             if site_updated:
                 self.updated = func.now()
+                self.site.updated = func.now()
         else:
             feed = feedparser.parse(self.link, modified=self.response_last_modified, etag=self.response_etag)
             self.pinged = func.now()
@@ -118,6 +119,7 @@ class Feed(Base):
                         self.entries.append(temp_entry)
                 if site_updated:
                     self.updated = func.now()
+                    self.site.updated = func.now()
 
 
 
