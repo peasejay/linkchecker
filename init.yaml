@@ -1,0 +1,78 @@
+init:
+  nationalreview:
+    title: National Review
+    tags: [conservative]
+    feeds:
+      homepage:
+        name: Homepage
+        link: http://www.nationalreview.com/
+        type: no-rss 
+  newyorker:
+    feeds:
+      main:
+        link: http://www.newyorker.com/feed/everything
+  theatlantic:
+    feeds:
+      main:
+        link: https://www.theatlantic.com/feed/all/
+  huffingtonpost:
+    feeds:
+      main:
+        link: http://www.huffingtonpost.com/feeds/index.xml
+  daringfireball:
+    tags: [technology]
+    feeds:
+      main: 
+        link: http://daringfireball.net/feeds/main
+  newyorktimes:
+    feeds:
+      homepage:
+        link: http://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml
+  washingonpost:
+    urls:
+    feeds:
+      national:
+        link: http://feeds.washingtonpost.com/rss/national
+  drudgereport:
+    title: The Drudge Report
+    tags: [conservative]
+    feeds:
+      homepage:
+        name: Homepage
+        link: http://www.drudgereport.com/
+        type: no-rss 
+  weeklystandard:
+    tags: [conservative]
+    feeds:
+      main:
+        link: http://www.weeklystandard.com/rss/all
+  boingboing:
+    feeds:
+      main:
+        link: http://boingboing.net/feed
+  hackaday:
+    tags: [technology]
+    feeds:
+      main:
+        link: http://hackaday.com/feed/
+  icringely:
+    tags: [technology]
+    feeds:
+      main:
+        link: http://www.cringely.com/feed/
+  eevblog:
+    tags: [technology, youtube]
+    feeds:
+      main:
+        link: https://www.youtube.com/feeds/videos.xml?channel_id=UC2DjFE7Xf11URZqWBigcVOQ
+  ave:
+    tags: [youtube]
+    feeds:
+      main:
+        link: https://www.youtube.com/feeds/videos.xml?channel_id=UChWv6Pn_zP0rI6lgGt3MyfA
+  colinfurze:
+    name: Colin Furze
+    tags: [youtube]
+    feeds:
+      main:
+        link: https://www.youtube.com/feeds/videos.xml?channel_id=UCp68_FLety0O-n9QU6phsgw
