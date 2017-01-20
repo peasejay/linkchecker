@@ -1,2 +1,3 @@
 *.py[cod]
 *.db
+*.local.yaml

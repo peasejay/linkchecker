@@ -1,2 +1,2 @@
 config:
-  connection_string: sqlite:///foo2.db
+  connection_string: sqlite:///foo.db

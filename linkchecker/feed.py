@@ -6,6 +6,8 @@ from entry import Entry
 import feedparser
 import requests
 import difflib
+import time
+import datetime
 
 class Feed(Base):
     __tablename__ = 'feeds'
@@ -108,12 +110,20 @@ class Feed(Base):
                         if 'content' in feed_entry:
                             if len(feed_entry.content):
                                 content = feed_entry.content[0].value
+                        published = None
+                        if feed_entry.get('published', None):
+                            published = datetime.datetime(*feed_entry.published_parsed[:6])
+                        updated = None
+                        if feed_entry.get('updated', None):
+                            updated = datetime.datetime(*feed_entry.updated_parsed[:6])
                         temp_entry = Entry(vendor_code=feed_entry.get('id', ''),
                                            title=feed_entry.get('title', ''),
                                            link=feed_entry.get('link', ''),
                                            summary=feed_entry.get('summary', ''),
                                            content=content,
                                            author=feed_entry.get('author', ''),
+                                           published=published,
+                                           updated=updated,
                                            pinged=func.now()
                                            )
                         self.entries.append(temp_entry)

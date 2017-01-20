@@ -89,8 +89,8 @@ class LinkChecker:
                 self.session.commit()
 
     def test_output_simple(self):
-        sites = self.session.query(Site).order_by(Site.updated.desc())
-        template = Template('{% for site in sites %}{{ site.title }}\t{{ site.link }}\t{{ site.updated }}\n{% for feed in site.feeds %}{% for entry in feed.entries %}    {{ entry.title }}\t{{ entry.author }}\t{{ entry.link }}\t{{ entry.pinged }}\n{% endfor %}\n{% endfor %}\n{% endfor %}')
+        sites = self.session.query(Site).order_by(Site.published.desc())
+        template = Template('{% for site in sites %}{{ site.title }}\t{{ site.link }}\t{{ site.updated }}\n{% for feed in site.feeds %}{% for entry in feed.entries %}    {{ entry.title }}\t{{ entry.author }}\t{{ entry.link }}\t{{ entry.published }}\n{% endfor %}\n{% endfor %}\n{% endfor %}')
         output = template.render(sites=sites)
         return output
 

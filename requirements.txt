@@ -1,6 +1,7 @@
 argparse
 feedparser
 pyyaml
+mysqlclient
 SQLAlchemy
 requests
 Jinja2

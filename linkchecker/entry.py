@@ -15,7 +15,9 @@ class Entry(Base):
     summary = Column(Text())
     content = Column(Text())
     link = Column(String(255))
-    pinged = Column(DateTime(timezone=True), onupdate=func.now())
+    published = Column(DateTime(timezone=True))
+    updated = Column(DateTime(timezone=True))
+    pinged = Column(DateTime(timezone=True))
 
 
     def __repr__(self):

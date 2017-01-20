@@ -11,7 +11,7 @@ RUN apt-get update
 RUN apt-get -y upgrade
 
 # Install apt stuff
-RUN apt-get -y install sqlite3
+RUN apt-get -y install sqlite3 python-dev libmysqlclient-dev
 
 
 # Host application directory in docker image
@@ -28,7 +28,7 @@ RUN pip install -r /code/requirements.txt
 WORKDIR /code
 
 
-CMD ./test.py
+CMD ./check_links.py
 
 
 
