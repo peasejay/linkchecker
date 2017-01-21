@@ -3,6 +3,7 @@ import yaml
 import os.path
 from shutil import copy
 from linkchecker import *
+import MySQLdb
 from sqlalchemy import create_engine
 
 
